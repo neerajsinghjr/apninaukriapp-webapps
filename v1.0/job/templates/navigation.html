@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    {% load static %}
+    <title>job portal</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .nav-link{
+    color :white !important;
+    margin-right:4px;
+    }
+    .nav-link:hover{
+    color :yellow !important;
+    font-weight:bold;
+    background-color:red;
+    border-radius:10px;
+    }
+</style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm" style="background-color:maroon">
+    <a class="navbar-brand text-white pl-5 font-weight-bold" style="font-family:'Monotype Corsiva';font-size:30px">Job Portal</a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'index'%}" style="margin-left:280px"><i class="fa fa-home mr-1px"></i>Home</a>
+        </li>
+         <li class="nav-item">
+            <a class="nav-link" href="{% url 'index'%}"><i class="fa fa-users mr-1px"></i>Latest Jobs</a>
+        </li>
+         <li class="nav-item">
+            <a class="nav-link" href="{% url 'user_login'%}"><i class="fa fa-user-plus mr-1px"></i>User Login</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'recureter_login'%}"><i class="fa fa-sign-language mr-1px"></i>Recruiter Login</a>
+        </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'admin_login'%}"><i class="fa fa-sign-in mr-1px"></i>Admin Login</a>
+        </li>
+         <li class="nav-item">
+              <a class="nav-link" href="{% url 'index'%}"><i class="fa fa-phone mr-1px"></i>Contact</a>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>
+{% block body %}
+{% endblock %}

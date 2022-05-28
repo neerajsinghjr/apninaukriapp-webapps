@@ -1,0 +1,87 @@
+{% extends 'navigation.html' %}
+
+{% load static %}
+{% block body %}
+<style>
+ .container{
+ max-width : 98%
+ }
+ .content{
+ text-align : center;
+ position : absolute;
+ bottom :0;
+ background: rgba(0,0,0,0.5);
+ color : white;
+ font-weight : bold;
+ }
+
+</style>
+<div class="image-box" style="display:block">
+    <img src="{% static 'images/job2.jpeg'%}" style="height:530px;width:100%">
+</div>
+<div class="container" style="background-color:black; margin-top:1%">
+    <h1 class="text-center text-white">-----------| OUR PLACED STUDENT |-----------</h1>
+
+    <div class="row mt-3">
+        <div class="col-md-3">
+            <img src="{% static 'images/stu1.jpeg' %}" style="width=100%;margin-top:5%;height:200px; border-radius:50%">
+            <div class="content" style="height:30px;width:91%">
+                <p>HCL</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/stu2.jpeg' %}" style="width=100%;margin-top:5%;height:200px; border-radius:50%">
+            <div class="content" style="height:30px;width:91%">
+                <p>Wipro</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/stu3.jpeg' %}" style="width=100%;margin-top:5%;height:200px; border-radius:50%">
+            <div class="content" style="height:30px;width:91%">
+                <p>Samsung</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/stu4.jpeg' %}" style="width=100%;margin-top:5%;height:200px; border-radius:50%">
+            <div class="content" style="height:30px;width:91%">
+                <p>Infosys</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-3">
+            <img src="{% static 'images/stu5.jpeg' %}" style="width=100%;margin-top:5%;height:200px; border-radius:50%">
+            <div class="content" style="height:30px;width:91%">
+                <p>Tech Mahindra</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/stu2.jpeg' %}" style="width=100%;margin-top:5%;height:200px; border-radius:50%">
+            <div class="content" style="height:30px;width:91%">
+                <p>Wipro</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/stu3.jpeg' %}" style="width=100%;margin-top:5%;height:200px; border-radius:50%">
+            <div class="content" style="height:30px;width:91%">
+                <p>Samsung</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/stu4.jpeg' %}" style="width=100%;margin-top:5%;height:200px; border-radius:50%">
+            <div class="content" style="height:30px;width:91%">
+                <p>Infosys</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'footer.html' %}
+{% endblock %}

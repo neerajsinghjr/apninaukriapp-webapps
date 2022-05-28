@@ -1,0 +1,83 @@
+{% extends 'recruiter_navigation.html' %}
+{% load static %}
+{% block body %}
+<marquee
+        style="font-family : monotype corsiva; font-size:25px;color:darkcyan;background-color:black;font-weight:bold;margin-top:1%">
+    Add Job Detail
+</marquee>
+<hr>
+<form class="container mt-5" name="signup" onsubmit="return checkpass()" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-row">
+        <div class="form-group col-md-12">
+            <label><b>Job Title</b></label>
+            <input type="text" class="form-control" name="jobtitle" required>
+        </div>
+
+
+
+        <div class="form-group col-md-6">
+            <label><b>Start Date</b></label>
+            <input type="date" class="form-control" name="startdate" required>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label><b>End Date</b></label>
+            <input type="date" class="form-control" name="enddate" required>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label><b>Salary(Per Month)</b></label>
+            <input type="text" class="form-control" name="salary" required>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label><b>Company Logo</b></label>
+            <input type="File" class="form-control" name="logo" required>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label><b>Experience(In Years)</b></label>
+            <input type="text" class="form-control" name="experience" required>
+        </div>
+
+
+
+        <div class="form-group col-md-6">
+            <label><b>Required Skills</b></label>
+            <input type="text" class="form-control" name="skills" required>
+        </div>
+
+         <div class="form-group col-md-6">
+            <label><b>Location</b></label>
+            <input type="text" class="form-control" name="location" required>
+        </div>
+
+         <div class="form-group col-md-12">
+            <label><b>Description</b></label>
+            <textarea class="form-control" name="description" required></textarea>
+        </div>
+
+    </div>
+    </div>
+    <input type="submit" value="submit" class="btn btn-primary">
+
+
+</form>
+{% include 'footer.html' %}
+
+{% ifequal error "no" %}
+<script>
+    alert("job detail has been added Successful")
+    window.location=('{% url 'job_list' %}');
+</script>
+{% endifequal  %}
+
+
+{% ifequal error "yes" %}
+<script>
+    alert("something went wrong, try again")
+</script>
+{% endifequal  %}
+
+{% endblock %}
